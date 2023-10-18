@@ -4,10 +4,10 @@ const port = 80;
 const path = require('path');
 const __dirname1 = path.resolve();
 
-app.use(express.static(path.join(__dirname1, "../build")));
+app.use(express.static(path.join(__dirname1, "/build")));
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname1, "../build", "index.html"));
+    res.sendFile(path.join(__dirname1, "build", "index.html"));
 });
 
 app.listen(port, console.log(`App is listening on port`, port));
